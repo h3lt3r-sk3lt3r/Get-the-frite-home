@@ -1,5 +1,6 @@
 #frite {
 background-color: (#f2b406);
+border-bottom: solid #c49106 2px;
 }
 
 h5 {
@@ -8,4 +9,38 @@ color : black;
 
 a:hover {
 text-decoration: none;
+}
+
+.navbar-all .btn {
+            font-size: 1rem;
+            text-align: center;
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 42px rgb(230, 18, 124),
+                0 0 77px rgb(230, 18, 124),
+                0 0 100px rgb(230, 18, 124);
+            animation: lumiere 1s infinite linear;
+border-radius: 3px;
+}
+ .navbar-add .btn {
+            font-size: 1rem;
+            text-align: center;
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 42px rgb(230, 18, 124),
+                0 0 77px rgb(230, 18, 124),
+                0 0 100px rgb(230, 18, 124);
+            animation: lumiere 1s infinite linear;
+border-radius: 3px;
+}
+
+.nav-link {
+  color: black;
+  border: solid rgb(65, 63, 63) 1px;
+  border-radius: 3px;
+  font-size: 1rem;
 }
