@@ -9,7 +9,6 @@ puts "Cleaning database..."
 Stall.destroy_all
 User.destroy_all
 
-
 puts "Creating user..."
 user1 = User.create!(first_name: "Djimbo", last_name: "Flex", address: "65 rue des confétis Lille", email: "djimbo@outlook.fr", password: "azerty")
 user2 = User.create!(first_name: "Flavie", last_name: "Flave", address: "79 rue des tulipes Hem", email: "fleur@gmail.com", password: "azerty")
