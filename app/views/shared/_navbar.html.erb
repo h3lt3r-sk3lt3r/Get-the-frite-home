@@ -1,17 +1,19 @@
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid d-flex justify-content-around">
-    <a class="navbar-brand" href="#">
-      <%= image_tag "logo_frite.png", alt:"", width:30, height:24 %>
-    </a>
-      <div class="d-inline-flex p-2 bd-highlight">
-        <a class="navbar-all" href="#">
-          <h5>All 'baraques à frites'  <span> | </span></h5>
-        </a>
-        <a class="navbar-add" href="#">
-          <h5>  Add a 'baraque à frites'</h5>
-        </a>
-      </div>
+<div id="frite">
+  <nav class="navbar" role="navigation">
+    <div class="container-fluid d-flex justify-content-around">
+      <a class="navbar-brand" href="#">
+        <%= image_tag "logo_frite.png", alt:"", width:240, height:192 %>
+      </a>
+        <div class="d-inline-flex p-2 bd-highlight">
+          <a class="navbar-all" href="#">
+            <h5>Toutes les baraques à frites  <span> | </span></h5>
+          </a>
+          <a class="navbar-add" href="#">
+            <h5> Ajouter une baraque à frites</h5>
+          </a>
+        </div>
 
-    <h5><%= link_to "Log in", new_user_session_path, class: "nav-link" %></h5>
-  </div>
-</nav>
+      <h5><%= link_to "Se connecter", new_user_session_path, class: "nav-link" %></h5>
+    </div>
+  </nav>
+</div>
