@@ -27,7 +27,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
-    margin-top: 30px;
     justify-content: center;
   }
 
@@ -99,5 +98,8 @@
 
 .white-background p {
   line-height: 17px;
-
 }
+
+  .main-container {
+    padding-top:0;
+  }
