@@ -1,13 +1,11 @@
 TESTEST SHOW
- def show
-    @stall = Stall.find(params[:id])
-  end
 
   <h1><%= @stall.name %></h1>
-  <ul> <%= @stalls.each do |stall| %>
-      <li><%= stall.name %></li>
-      <li><%= stall.user %></li>
-      <li><%= stall.price_per_day %></li>
-      <li><%= stall.description %></li>
-      <li><%= stall.menu_description %></li>
+  <ul> <%= stalls.each do |stall| %>
+        <li><%= stall.name %></li>
+        <li><%= stall.user %></li>
+        <li><%= stall.price_per_day %></li>
+        <li><%= stall.description %></li>
+        <li><%= stall.menu_description %></li>
+      <% end %>
   </ul>
