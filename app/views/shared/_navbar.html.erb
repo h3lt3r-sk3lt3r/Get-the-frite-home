@@ -6,16 +6,16 @@
       </a>
       <div class="neon">
         <div class="d-inline-flex p-2 bd-highlight">
-          <a class="navbar-all" href="#">
+          <a class="navbar-all" href= <%= stalls_path %>>
             <button type="button" class="btn btn-outline-dark">Toutes les baraques à frites</button>
           </a>
        </div>
-          <a class="navbar-add" href="#">
+          <a class="navbar-add" href=<%= new_stall_path %>>
             <button type="button" class="btn btn-outline-dark">Ajouter une baraque à frites</button>
           </a>
         </div>
 
-      <h5 class="navbar-login"><%= link_to "Se connecter", new_user_session_path, class: "nav-link" %></h5>
+      <h5><%= link_to "Se connecter", new_user_session_path, class: "nav-link" %></h5>
     </div>
   </nav>
 </div>
