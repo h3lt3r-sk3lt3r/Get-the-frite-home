@@ -13,9 +13,9 @@
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     text-decoration: none;
-    
+
   }
-  
+
   .card-category > a{
     text-decoration: none;
     color:white;
@@ -37,7 +37,7 @@
     text-decoration: none;
 
   }
-  
+
   .card p {
     font-size: 12px;
     line-height: 1.4;
@@ -45,6 +45,60 @@
     margin-bottom: 0;
     margin-top: 8px;
   }
+
+  .card-stall {
+  margin-top: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-stall > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-stall h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-stall p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-stall .card-stall-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-stall-infos .card-stall-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.white-background {
+  background-color: white;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  border-left: solid 1px black ;
+  max-width: 600px;
+  word-wrap: break-word;
+}
+
+.white-background p {
+  line-height: 17px;
+}
 
   .main-container {
     padding-top:0;

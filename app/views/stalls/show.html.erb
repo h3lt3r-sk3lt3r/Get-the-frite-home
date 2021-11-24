@@ -1,1 +1,17 @@
-TESTEST SHOW
+<div class="container py-5">
+
+    <div class="d-flex justify-content-center">
+      <div class ="white-background">
+
+        <div class="m-5">
+          <h2> <%= @stall.name %></h2>
+            <p><%= @stall.user.first_name %> <%=@stall.user.last_name  %></p>
+            <p><%= @stall.price_per_day %></p>
+            <p><%= @stall.description %></p>
+            <p><%= @stall.menu_description %></p>
+        </div>
+      </div>
+       <img src="https://images.unsplash.com/photo-1550259114-ad7188f0a967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" style="width:300px;"/>
+    </div>
+
+</div>
