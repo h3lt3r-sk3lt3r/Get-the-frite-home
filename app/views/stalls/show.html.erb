@@ -1,1 +1,9 @@
-TESTEST SHOW
+<h1><%= @stall.name %></h1>
+  <ul>
+      <li><%= @stall.name %></li>
+      <li><%= @stall.user.first_name %> <%=@stall.user.last_name  %></li>
+      <li><%= @stall.price_per_day %></li>
+      <li><%= @stall.description %></li>
+      <li><%= @stall.menu_description %></li>
+
+  </ul>
