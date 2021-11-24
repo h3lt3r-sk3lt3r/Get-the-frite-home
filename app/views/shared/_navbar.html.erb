@@ -18,7 +18,7 @@
           </a>
         </div>
 
-      <h5><%= link_to "Se connecter", new_user_session_path, class: "nav-link" %></h5>
+      <h5><%= link_to "Se connecter", new_user_session_path, class: "nav-link" %><%= link_to "Se déconnecter",  destroy_user_session_path , :method => :delete, class: "nav-link" %></h5>
     </div>
   </nav>
 </div>
