@@ -9,6 +9,13 @@
     <button class="btn btn-outline-secondary" type="button">Où cho ?</button>
   </div>
   <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+  <%= form_tag stalls_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Trouver une baraque à frites"  %>
+  <%= submit_tag "GO", class: "btn btn-primary" %>
+  <% end %>
 </div>
 
   <div class="cards">
