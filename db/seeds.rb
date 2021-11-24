@@ -10,10 +10,31 @@ Stall.destroy_all
 User.destroy_all
 
 puts "Creating user..."
-user1 = User.create!(first_name: "Djimbo", last_name: "Flex", address: "65 rue des confétis Lille", email: "djimbo@outlook.fr", password: "azerty")
-user2 = User.create!(first_name: "Flavie", last_name: "Flave", address: "79 rue des tulipes Hem", email: "fleur@gmail.com", password: "azerty")
+user1 = User.create!(first_name: "Djimbo", last_name: "Flex", address: "22 Bd Vauban, 59800 Lille", email: "djimbo@outlook.fr", password: "azerty")
+user2 = User.create!(first_name: "Flavie", last_name: "Flave", address: "132-140 Rue Solférino, 59800 Lille", email: "fleur@gmail.com", password: "azerty")
+user3 = User.create!(first_name: "Thierry", last_name: "Roland", address: "116 Rue Meurein, 59800 Lille", email: "fleur@gmail.com", password: "azerty")
+user4 = User.create!(first_name: "Daniel", last_name: "Courtin", address: "189-173 Rue Nationale, 59800 Lille", email: "fleur@gmail.com", password: "azerty")
+user5 = User.create!(first_name: "Éleonore", last_name: "Létoilepolère", address: "12 Rue de la Halle, 59300 Valenciennes", email: "fleur@gmail.com", password: "azerty")
+user6 = User.create!(first_name: "Fifine", last_name: "Mirtusse", address: "7-1 Rue de la Paix, 59300 Valenciennes", email: "fleur@gmail.com", password: "azerty")
+user7 = User.create!(first_name: "Bubune", last_name: "Zesque", address: "5-1 Rue d'Oultreman, 59300 Valenciennes", email: "fleur@gmail.com", password: "azerty")
+user8 = User.create!(first_name: "Cindy", last_name: "Sanders", address: "5bis Rue Askièvre, 59300 Valenciennes", email: "fleur@gmail.com", password: "azerty")
+user9 = User.create!(first_name: "Didier", last_name: "Ridou", address: "19 Rue des Trois Visages, 62000 Arras", email: "fleur@gmail.com", password: "azerty")
+user10 = User.create!(first_name: "Gaston", last_name: "Gurvignolle", address: "4 Pl. des Héros, 62000 Arras", email: "fleur@gmail.com", password: "azerty")
+user11 = User.create!(first_name: "Hervé", last_name: "Chataîgne", address: "19-3 Rue Albert 1er de Belgique, 62000 Arras", email: "fleur@gmail.com", password: "azerty")
+user12 = User.create!(first_name: "Helène", last_name: "Élégarsson", address: "14 Rue du Marché au Filé, 62000 Arras", email: "fleur@gmail.com", password: "azerty")
+
 p user1
 p user2
+p user3
+p user4
+p user5
+p user6
+p user7
+p user8
+p user9
+p user10
+p user11
+p user12
 puts "Finished!"
 
 puts "Creating stall..."
