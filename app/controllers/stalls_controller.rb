@@ -1,4 +1,5 @@
 class StallsController < ApplicationController
+  before_action :authenticate_user!
   def index
     if params[:query].present?
       @stalls = Stall.near(params[:query], 20)
@@ -27,7 +28,7 @@ class StallsController < ApplicationController
     @stall = Stall.new(stall_params)
     @stall.user = current_user
     if @stall.save
-      redirect_to stall_path(@stall)
+      redirect_to mystalls_path(@stall)
     else
       render :new
     end
@@ -50,11 +51,11 @@ class StallsController < ApplicationController
   def destroy
     @stall = Stall.find(params[:id])
     @stall.destroy
-    redirect_to stalls_path
+    redirect_to mystalls_path
   end
 
   def mystalls
-
+    @stalls = Stall.where(user: current_user)
   end
 
   private
