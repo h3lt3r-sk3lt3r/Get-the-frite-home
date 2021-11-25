@@ -27,6 +27,19 @@ class StallsController < ApplicationController
     end
   end
 
+  def edit
+    @stall = Stall.find(params[:id])
+  end
+
+  def update
+    @stall = Stall.find(params[:id])
+    if @stall.update
+      redirect_to stalls_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @stall = Stall.find(params[:id])
     @stall.destroy
