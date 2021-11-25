@@ -47,7 +47,7 @@ class StallsController < ApplicationController
   end
 
   def mystalls
-
+    @stalls = Stall.where(params[:id])
   end
 
   private
