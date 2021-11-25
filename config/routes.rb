@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   patch "bookings/:id/accepted", to: "bookings#accepted"
   patch "bookings/:id/declined", to: "bookings#declined"
+  get "/mystalls", to: "stalls#mystalls"
 end
