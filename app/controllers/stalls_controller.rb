@@ -3,11 +3,10 @@ class StallsController < ApplicationController
     @stalls = Stall.all
     @markers = []
     @stalls.each do |stall|
-      if stall.user.geocoded?
-        @markers<<{lat:stall.user.latitude,lng:stall.user.longitude}
+      if stall.geocoded?
+        @markers<<{lat:stall.latitude,lng:stall.longitude}
       end
     end
-
   end
 
   def show
