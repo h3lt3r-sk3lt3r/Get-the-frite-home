@@ -33,6 +33,10 @@ class StallsController < ApplicationController
     redirect_to stalls_path
   end
 
+  def mystalls
+
+  end
+
   private
 
   def stall_params
