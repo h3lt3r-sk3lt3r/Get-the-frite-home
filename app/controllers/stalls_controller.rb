@@ -35,6 +35,7 @@ class StallsController < ApplicationController
     @stall = Stall.find(params[:id])
     if @stall.update
       redirect_to stalls_path
+      # quand elle sera fait, redirection vers la page de profil
     else
       render :edit
     end
@@ -49,6 +50,6 @@ class StallsController < ApplicationController
   private
 
   def stall_params
-    params.require(:stall).permit(:name, :price_per_day, :description, :menu_description)
+    params.require(:stall).permit(:name, :price_per_day, :description, :menu_description, :address)
   end
 end
