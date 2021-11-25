@@ -25,8 +25,9 @@ class StallsController < ApplicationController
 
   def create
     @stall = Stall.new(stall_params)
+    @stall.user = current_user
     if @stall.save
-      redirect_to mystalls_path(@stall)
+      redirect_to stall_path(@stall)
     else
       render :new
     end
