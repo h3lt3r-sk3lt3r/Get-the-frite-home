@@ -1,12 +1,15 @@
- .background-form {
-opacity: 0.3;
+ .new-form {
+    background:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://images.unsplash.com/photo-1565524622405-171b921788ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
+ }
+
+  .edit-form {
+    background:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://images.unsplash.com/photo-1565524622405-171b921788ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
  }
 
 .background-form  {
     background-size: cover;
     background-position: center;
     padding: 150px 0;
-    background-image: url("https://images.unsplash.com/photo-1565524622405-171b921788ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
   }
 
   .background-form  h1 {
