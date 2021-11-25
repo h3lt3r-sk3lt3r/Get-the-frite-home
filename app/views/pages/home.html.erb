@@ -4,9 +4,14 @@
 <div class="container">
   <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-secondary" type="button">Din quel coin ?</button>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button class="btn btn-outline-secondary" type="button">Où cho ?</button>
+    <%= form_tag stalls_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Din quel coin ?"
+      %>
+      <%= submit_tag "Va caire !", class: "btn btn-primary" %>
+    <% end %>
   </div>
   <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
 </div>

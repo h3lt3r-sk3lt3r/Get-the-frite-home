@@ -1,6 +1,11 @@
 class StallsController < ApplicationController
   def index
-    @stalls = Stall.all
+    if params[:query].present?
+      @stalls = Stall.near(params[:query], 20)
+    else
+      @stalls = Stall.all
+    end
+
     @markers = []
     @stalls.each do |stall|
       if stall.geocoded?
