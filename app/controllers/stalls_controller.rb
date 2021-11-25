@@ -1,6 +1,11 @@
 class StallsController < ApplicationController
   def index
-    @stalls = Stall.all
+    if params[:query].present?
+      @stalls = Stall.near(params[:query], 20)
+    else
+      @stalls = Stall.all
+    end
+
     @markers = []
     @stalls.each do |stall|
       if stall.geocoded?
@@ -11,6 +16,7 @@ class StallsController < ApplicationController
 
   def show
     @stall = Stall.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -20,7 +26,7 @@ class StallsController < ApplicationController
   def create
     @stall = Stall.new(stall_params)
     if @stall.save
-      redirect_to stall_path(@stall)
+      redirect_to mystalls_path(@stall)
     else
       render :new
     end
