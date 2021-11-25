@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.stall = @stall
     @booking.user = current_user
     if @booking.save
-      redirect_to stall_path(@stall)
+      redirect_to new_user_session_path(@stall)
     else
       render :new
     end
