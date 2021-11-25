@@ -8,7 +8,7 @@
             <p><%= stall.user.first_name %> <%=stall.user.last_name  %></p>
             <p><%= stall.price_per_day %></p> <span> <%= link_to "Editer cette baraque", edit_stall_path(stall) %> </span>
             <p><%= stall.description %></p> <span> <%= link_to "Supprimer cette baraque", stall_path(stall), method: :delete %> </span>
-            <p><%= stall.menu_description %></p> <span> <%= link_to "Ajouter un nouvelle baraque", stall_path %> </span>
+            <p><%= stall.menu_description %></p> <span> <%= link_to "Ajouter un nouvelle baraque", new_stall_path %> </span>
         </div>
       </div>
        <img src="https://images.unsplash.com/photo-1550259114-ad7188f0a967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" style="width:300px;"/>
