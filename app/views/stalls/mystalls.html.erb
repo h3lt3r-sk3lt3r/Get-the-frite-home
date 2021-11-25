@@ -6,8 +6,8 @@
         <div class="m-5">
           <h2> <%= stall.name %></h2>
             <p><%= stall.user.first_name %> <%=stall.user.last_name  %></p>
-            <p><%= stall.price_per_day %></p> <span> <%= link_to "Edit", "edit_stall_path" %> </span>
-            <p><%= stall.description %></p>
+            <p><%= stall.price_per_day %></p> <span> <%= link_to "Editer cette baraque", edit_stall_path(stall) %> </span>
+            <p><%= stall.description %></p> <span> <%= link_to "Supprimer cette baraque", stall_path(stall), method: :delete %> </span>
             <p><%= stall.menu_description %></p>
         </div>
       </div>

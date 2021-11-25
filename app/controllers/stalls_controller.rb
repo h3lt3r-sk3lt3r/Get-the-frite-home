@@ -49,7 +49,7 @@ class StallsController < ApplicationController
   def destroy
     @stall = Stall.find(params[:id])
     @stall.destroy
-    redirect_to stalls_path
+    redirect_to mystalls_path
   end
 
   def mystalls
