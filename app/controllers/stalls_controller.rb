@@ -1,4 +1,5 @@
 class StallsController < ApplicationController
+  before_action :authenticate_user!
   def index
     if params[:query].present?
       @stalls = Stall.near(params[:query], 20)

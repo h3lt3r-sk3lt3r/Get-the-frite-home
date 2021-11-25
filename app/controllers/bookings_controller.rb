@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!
   def new
     @booking = Booking.new
     @stall = Stall.find(params[:stall_id])
@@ -9,7 +10,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.stall = @stall
     @booking.user = current_user
-    
+
     if @booking.save
       redirect_to mystalls_path(@stall)
     else
