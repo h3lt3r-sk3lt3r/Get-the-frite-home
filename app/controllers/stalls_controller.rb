@@ -40,7 +40,7 @@ class StallsController < ApplicationController
 
   def update
     @stall = Stall.find(params[:id])
-    if @stall.save
+    if @stall.update(stall_params)
       redirect_to mystalls_path
       # quand elle sera fait, redirection vers la page de profil
     else
