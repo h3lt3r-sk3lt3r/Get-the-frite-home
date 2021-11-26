@@ -24,7 +24,7 @@
           <% if stall.photo.attached? %>
            <%= cl_image_tag stall.photo.key%>
           <% else  %>
-          <img src="https://www.stockvault.net/data/2019/03/20/262656/preview16.jpg">
+          <img src="https://www.yvelines-infos.fr/content/uploads/2017/baraque-a-frite.jpg">
           <% end %>
            <h2><%= link_to stall.name, stall_path(stall) %></h2>
            <p><%=stall.price_per_day %></p>
