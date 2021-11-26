@@ -5,7 +5,7 @@
         <%= image_tag "logo_frite.png", alt:"", width:240, height:192 %>
       </a>
 
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column mr-5">
         <div class="accroche">La baraque à frites s'invite chez vous !</div>
         <div class="neon">
           <div class="d-inline-flex p-2 bd-highlight">
@@ -13,14 +13,23 @@
               <button type="button" class="btn btn-outline-dark">Toutes les baraques à frites</button>
             </a>
           </div>
+
+            <a class="navbar-mystalls" href=<%= mystalls_path %>>
+              <button type="button" class="btn btn-outline-dark">Mes baraques à frites</button>
+            </a>
+
             <a class="navbar-add" href=<%= new_stall_path %>>
               <button type="button" class="btn btn-outline-dark">Ajouter une baraque à frites</button>
             </a>
         </div>
       </div>
-
-      <h5><%= link_to "Se connecter", new_user_session_path, class: "nav-link-in" %></h5>
-      <h5><%= link_to "Se déconnecter",  destroy_user_session_path , :method => :delete, class: "nav-link-out" %></h5>
+      <div class="connect">
+        <% if current_user %>
+            <h5><%= link_to "Se déconnecter",  destroy_user_session_path , :method => :delete, class: "nav-link-out" %></h5>
+        <% else %>
+            <h5><%= link_to "Se connecter", new_user_session_path, class: "nav-link-in" %></h5>
+        <% end  %>
+      </div>
     </div>
   </nav>
 </div>
