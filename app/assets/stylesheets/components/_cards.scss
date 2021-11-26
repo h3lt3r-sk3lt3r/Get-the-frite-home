@@ -35,12 +35,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
     justify-content: center;
+    padding-right: 2em;
   }
 
   .card {
-    border: solid 4px transparent;
+    border: solid 3px transparent;
     border-image: linear-gradient(#f6b73c, #202020) 80;
-    border-radius: 3px;
+    border-radius: 5px;
+    background-image: linear-gradient(black,white);
   }
 
   .card h2 {
@@ -48,6 +50,13 @@
     font-weight: bold;
     margin: 0;
     text-decoration: none;
+    text-align: center;
+
+  }
+
+  .card-text {
+    text-align: center;
+    padding-top: 20px;
 
   }
 
@@ -57,6 +66,7 @@
     opacity: .7;
     margin-bottom: 0;
     margin-top: 8px;
+    text-align: center;
   }
 
   .card-stall {

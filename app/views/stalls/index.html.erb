@@ -19,10 +19,11 @@
      <% @stalls.each do |stall| %>
         <div class="card">
             <img src="https://www.stockvault.net/data/2019/03/20/262656/preview16.jpg">
-
+          <div class="card-text">
             <h2><%= link_to stall.name, stall_path(stall) %></h2>
             <p><%=stall.price_per_day %></p>
             <p><%=stall.description %></p>
+          </div>
         </div>
         <% end %>
     </div>
