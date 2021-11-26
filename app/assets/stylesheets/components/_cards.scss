@@ -37,6 +37,12 @@
     justify-content: center;
   }
 
+  .card {
+    border: solid 4px transparent;
+    border-image: linear-gradient(#f6b73c, #202020) 80;
+    border-radius: 3px;
+  }
+
   .card h2 {
     font-size: 16px;
     font-weight: bold;
