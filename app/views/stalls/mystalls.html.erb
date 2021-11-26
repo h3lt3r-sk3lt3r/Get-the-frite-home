@@ -1,17 +1,58 @@
 <div class="container py-5">
- <% @stalls.each do |stall| %>
-    <div class="d-flex justify-content-center">
-      <div class ="white-background">
 
-        <div class="m-5">
-          <h2> <%= stall.name %></h2>
-            <p><%= stall.user.first_name %> <%=stall.user.last_name  %></p>
-            <p><%= stall.price_per_day %></p> <span> <%= link_to "Editer cette baraque", edit_stall_path(stall) %> </span>
-            <p><%= stall.description %></p> <span> <%= link_to "Supprimer cette baraque", stall_path(stall), method: :delete %> </span>
-            <p><%= stall.menu_description %></p> <span> <%= link_to "Ajouter un nouvelle baraque", new_stall_path %> </span>
-        </div>
+    <% @stalls.each do |stall| %>
+      <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="card">
+              <img class="image-stalls" src="https://images.unsplash.com/photo-1550259114-ad7188f0a967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="card-img-top" alt="friterie">
+              <div class="card-body">
+                <h5 class="card-title">baraque: <%= stall.name %></h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Nom: <%= stall.user.first_name %> - Prénom: <%=stall.user.last_name  %></li>
+                  <li class="list-group-item">Description: <%= stall.description %></li>
+                  <li class="list-group-item">Prix: <%= stall.price_per_day %>€ par jour</li>
+                </ul>
+                <p class="card-text">Menu: <%= stall.menu_description %></p>
+              </div>
+              <div class="card-body">
+                <a class="card-link"><%= link_to "Editer", edit_stall_path(stall) %> -</a>
+                <a class="card-link"><%= link_to "Supprimer", stall_path(stall), method: :delete %></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-flex flex-column" style="gap: 10px">
+            <div class="card bg-light h-100 ">
+              <div>Vos requêtes en attente :</div>
+                <div>
+                  <ul>
+                    <% stall.bookings.each do |booking| %>
+                      <li>
+                        <div class="d-flex justify-content-between pl-2 pr-4">
+                          <p><%= booking.user.first_name %> <%= booking.user.last_name %> du <%= booking.start_date %> au <%= booking.end_date %>  </p>
+                          <div>
+                            <%= link_to accepted_path(booking), method: :patch do %>
+                              <i class="fas fa-check"></i>
+                            <% end %>
+                            <%= link_to declined_path(booking), method: :patch do %>
+                              <i class="fas fa-times"></i>
+                            <% end %>
+                          </div>
+                        </div>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+            </div>
+            <div class="card bg-light h-100">
+              <div>Vos requêtes acceptées :</div>
+                <% stall.bookings.where(status: "accepted").each do |booking| %>
+                  <p><%= booking.user.first_name %> <%= booking.user.last_name %> du <%= booking.start_date %> au <%= booking.end_date %>  </p>
+                <% end %>
+            </div>
+          </div>
       </div>
-       <img src="https://images.unsplash.com/photo-1550259114-ad7188f0a967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" style="width:300px;"/>
-    </div>
-  <% end %>
+    <% end %>
 </div>
+
+
+<%=  %>
