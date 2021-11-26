@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: :destroy
 
-  patch "bookings/:id/accepted", to: "bookings#accepted"
-  patch "bookings/:id/declined", to: "bookings#declined"
+  patch "bookings/:id/accepted", to: "bookings#accepted", as: :accepted
+  patch "bookings/:id/declined", to: "bookings#declined", as: :declined
   get "/mystalls", to: "stalls#mystalls"
 end

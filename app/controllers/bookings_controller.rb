@@ -18,8 +18,15 @@ class BookingsController < ApplicationController
     end
   end
 
+  def accepted
+  end
+
+  def declined
+  end
+
   private
+
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :status)
   end
 end
