@@ -1,29 +1,34 @@
 
- <div class="container">
-      <div class="row">
-        <div class="col-6 offset-md-3">
-          <form class='form-inline my-5'>
-            <input type="text" class="form-control flex-grow-1 mr-2" placeholder="Entrez une adresse ici">
-            <input type="submit" value="Géolocalisation !" class="btn btn-outline-secondary">
-          </form>
-           <p class='text-monospace lead text-center font-weight-bold'>
-            <!-- Display the coordinates here -->
-          </p>
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-md-3">
+      <%= form_tag stalls_path, class: "form-inline pr-4 mt-4", method: :get do %>
+        <div class="d-inline-flex p-2 bd-highlight input-group mb-2 mr-sm-2">
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control rounded",
+            placeholder: "Din quel coin ?"
+          %>
         </div>
-      </div>
-      </div>
+        <%= submit_tag "Va caire !", class: "btn btn-outline-primary mb-2" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
 <div class="main-container">
    <div class="cards">
      <% @stalls.each do |stall| %>
         <div class="card">
-            <img src="https://www.stockvault.net/data/2019/03/20/262656/preview16.jpg">
-          <div class="card-text">
-            <h2><%= class: card-link link_to stall.name, stall_path(stall) %></h2>
-            <p><%=stall.price_per_day %></p>
-            <p><%=stall.description %></p>
-          </div>
+          <% if stall.photo.attached? %>
+           <%= cl_image_tag stall.photo.key%>
+          <% else  %>
+          <img src="https://www.stockvault.net/data/2019/03/20/262656/preview16.jpg">
+          <% end %>
+           <h2><%= link_to stall.name, stall_path(stall) %></h2>
+           <p><%=stall.price_per_day %></p>
+           <p><%=stall.description %></p>
         </div>
         <% end %>
     </div>
