@@ -25,7 +25,7 @@
               <div>Vos requêtes en attente :</div>
                 <div>
                   <ul>
-                    <% stall.bookings.each do |booking| %>
+                    <% stall.bookings.where(status: "pending").each do |booking| %>
                       <li>
                         <div class="d-flex justify-content-between pl-2 pr-4">
                           <p><%= booking.user.first_name %> <%= booking.user.last_name %> du <%= booking.start_date %> au <%= booking.end_date %>  </p>
