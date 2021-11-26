@@ -1,29 +1,36 @@
 <div class="container">
   <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <%= form_tag stalls_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control rounded",
-          placeholder: "Din quel coin ?"
-        %>
-        <%= submit_tag "Va caire !", class: "btn btn-outline-primary" %>
+    <div class="d-flex input-group-prepend">
+      <%= form_tag stalls_path, class: "form-inline pr-4 mt-4", method: :get do %>
+        <div class="d-inline-flex p-2 bd-highlight input-group mb-2 mr-sm-2">
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control rounded",
+            placeholder: "Din quel coin ?"
+          %>
+        </div>
+        <%= submit_tag "Va caire !", class: "btn btn-outline-primary mb-2" %>
       <% end %>
     </div>
   </div>
 
-  <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.stockvault.net/data/2008/07/03/105783/preview16.jpg)">
-    <%= link_to "Lille", stalls_path %>
+  <div class="cards mt-3">
+    <%= link_to stalls_path(query:"lille") do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.stockvault.net/data/2008/07/03/105783/preview16.jpg)">
+        <p>Lille</p>
+      </div>
+    <% end %>
+    <%= link_to stalls_path(query:"arras") do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.stockvault.net/data/2008/07/03/105786/preview16.jpg)">
+        <p>Arras</p>
     </div>
+   <% end %>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.stockvault.net/data/2008/07/03/105786/preview16.jpg)">
-    <%= link_to "Arras", stalls_path %>
+    <%= link_to stalls_path(query:"Valenciennes") do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/05/07/node_750150/47014325/public/2020/05/07/B9723405549Z.1_20200507184659_000%2BGLTFVRH37.1-0.jpg?itok=kMe8Q8481589032339)">
+        <p>Valenciennes</p>
     </div>
-
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.stockvault.net/data/2013/07/14/146569/preview16.jpg)">
-    <%= link_to "Valenciennes", stalls_path %>
-    </div>
+    <% end %>
   </div>
 </div>
 <div class="footer">
