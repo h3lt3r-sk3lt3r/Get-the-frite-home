@@ -24,6 +24,11 @@
         </div>
       </div>
       <div class="connect">
+        <p><% if user_signed_in? %>
+               <%="Hello #{current_user.first_name} !" %>
+           <% else %>
+              <%= "Hello t'chio gourmand !" %>
+              <%end%></p>
         <% if current_user %>
             <h5><%= link_to "Se déconnecter",  destroy_user_session_path , :method => :delete, class: "nav-link-out" %></h5>
         <% else %>
