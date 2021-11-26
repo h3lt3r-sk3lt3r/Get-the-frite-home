@@ -1,12 +1,15 @@
 <div class="container">
   <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <%= form_tag stalls_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control rounded",
-          placeholder: "Din quel coin ?"
-        %>
+    <div class="d-flex input-group-prepend">
+      <%= form_tag stalls_path, class: "form-inline", method: :get do %>
+        <div class="input-group mb-2 mr-sm-2">
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control rounded",
+            placeholder: "Din quel coin ?"
+          %>
+
+        </div>
         <%= submit_tag "Va caire !", class: "btn btn-outline-primary" %>
       <% end %>
     </div>
@@ -14,15 +17,15 @@
 
   <div class="cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.stockvault.net/data/2008/07/03/105783/preview16.jpg)">
-    <%= link_to "Lille", stalls_path %>
+    <%= link_to "Lille", stalls_path(query:"lille") %>
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.stockvault.net/data/2008/07/03/105786/preview16.jpg)">
-    <%= link_to "Arras", stalls_path %>
+    <%= link_to "Arras", stalls_path(query:"arras") %>
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.stockvault.net/data/2013/07/14/146569/preview16.jpg)">
-    <%= link_to "Valenciennes", stalls_path %>
+    <%= link_to "Valenciennes", stalls_path(query:"Valenciennes") %>
     </div>
   </div>
 </div>
