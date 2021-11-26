@@ -18,18 +18,20 @@
    <div class="cards">
      <% @stalls.each do |stall| %>
         <div class="card">
-            <img src="https://www.stockvault.net/data/2019/03/20/262656/preview16.jpg">
-
-            <h2><%= link_to stall.name, stall_path(stall) %></h2>
-            <p><%=stall.price_per_day %></p>
-            <p><%=stall.description %></p>
+          <% if stall.photo.attached? %>
+           <%= cl_image_tag stall.photo.key%>
+          <% else  %>
+          <img src="https://www.stockvault.net/data/2019/03/20/262656/preview16.jpg">
+          <% end %>
+           <h2><%= link_to stall.name, stall_path(stall) %></h2>
+           <p><%=stall.price_per_day %></p>
+           <p><%=stall.description %></p>
         </div>
         <% end %>
     </div>
-    <div id="map" 
+    <div id="map"
     style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-     </div> 
+     </div>
 </div>
- 
