@@ -1,18 +1,18 @@
 <div class="container py-5">
-
+<div><h1>Mes baraques :</h1></div>
     <% @stalls.each do |stall| %>
       <div class="row">
-          <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-6 mb-4">
             <div class="card">
               <img class="image-stalls" src="https://images.unsplash.com/photo-1550259114-ad7188f0a967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="card-img-top" alt="friterie">
               <div class="card-body">
-                <h5 class="card-title">baraque: <%= stall.name %></h5>
+                <h5 class="card-title"><i class="fas fa-arrow-circle-right"></i> <%= stall.name %></h5>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Nom: <%= stall.user.first_name %> - Prénom: <%=stall.user.last_name  %></li>
-                  <li class="list-group-item">Description: <%= stall.description %></li>
-                  <li class="list-group-item">Prix: <%= stall.price_per_day %>€ par jour</li>
+                  <li class="list-group-item"><u>Nom:</u> <%= stall.user.first_name %> - <u>Prénom:</u> <%=stall.user.last_name  %></li>
+                  <li class="list-group-item"><u>Description:</u> <%= stall.description %></li>
+                  <li class="list-group-item"><u>Prix:</u> <%= stall.price_per_day %>€ par jour</li>
                 </ul>
-                <p class="card-text">Menu: <%= stall.menu_description %></p>
+                <p class="card-text"><u>Menu:</u> <%= stall.menu_description %></p>
               </div>
               <div class="card-body">
                 <a class="card-link"><%= link_to "Editer", edit_stall_path(stall) %> -</a>
@@ -20,9 +20,9 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 d-flex flex-column" style="gap: 10px">
-            <div class="card bg-light h-100 ">
-              <div>Vos requêtes en attente :</div>
+          <div class="col-12 col-lg-6 d-flex flex-column mb-4" style="gap: 10px">
+            <div class="card-mystall bg-light h-100 ">
+              <div><u>Vos requêtes en attente :</u></div>
                 <div>
                   <ul>
                     <% stall.bookings.where(status: "pending").each do |booking| %>
@@ -43,8 +43,8 @@
                   </ul>
                 </div>
             </div>
-            <div class="card bg-light h-100">
-              <div>Vos requêtes acceptées :</div>
+            <div class="card-mystall bg-light h-100">
+              <div><u>Vos requêtes acceptées :</u></div>
                 <% stall.bookings.where(status: "accepted").each do |booking| %>
                   <p><%= booking.user.first_name %> <%= booking.user.last_name %> du <%= booking.start_date %> au <%= booking.end_date %>  </p>
                 <% end %>
