@@ -24,13 +24,14 @@
   height: 5px;
 }
 
+
 .punchlines {
   display: flex;
   justify-content: space-around;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.punchline {
+.punchline1, .punchline2 {
   width: 200px;
   height: 100px;
   word-break: normal;
