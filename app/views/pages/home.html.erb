@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="input-group mb-3">
+  <div class="input-group d-flex justify-content-center">
     <div class="d-flex input-group-prepend">
-      <%= form_tag stalls_path, class: "form-inline pr-4 mt-4", method: :get do %>
+      <%= form_tag stalls_path, class: "form-inline", method: :get do %>
         <div class="d-inline-flex p-2 bd-highlight input-group mb-2 mr-sm-2">
           <%= text_field_tag :query,
             params[:query],
