@@ -2,6 +2,7 @@
   <div class="input-group d-flex justify-content-center">
     <div class="d-flex input-group-prepend">
       <%= form_tag stalls_path, class: "form-inline", method: :get do %>
+        <%= image_tag "barack_2.png", alt:"Dessin de Barack Obama", class: "obama" %>
         <div class="d-inline-flex p-2 bd-highlight input-group mb-2 mr-sm-2">
           <%= text_field_tag :query,
             params[:query],
