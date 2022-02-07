@@ -1,7 +1,34 @@
 <div class="container">
-  <div class="input-group mb-3">
+  <div id="pics_punchlines">
+    <div class="pics">
+      <div class="pic1text1">
+        <%= image_tag "animated_party", alt:"illustration animée d'une fête", size: "250", class: "animated_party" %>
+        <p class="punchline1">Envie d'organiser un <strong>événement</strong> <br><strong>original</strong>, avec une touche<br><strong>Ch'ti & Choc</strong> ?</p>
+      </div>
+      <div class="borderbox">
+        <div class="border border1"></div>
+        <div class="border"></div>
+        <div class="border border3"></div>
+        <div class="border"></div>
+        <div class="border border5"></div>
+      </div>
+      <div class="pic2text2">
+        <%= image_tag "animated_food_truck.svg", alt:"illustration animée d'un foodtruck", size: "300", class: "animated_food_truck" %>
+        <p class="punchline2"><strong>Get the Frite Home</strong> est un service <br>de  <strong>location de baraque à frites</strong>. <br>Une idée simple, gourmande, <br> aux valeurs <strong>locales</strong> !</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="borderbox2">
+      <div class="border border1"></div>
+      <div class="border"></div>
+      <div class="border border3"></div>
+    </div>
+
+  <div class="input-group d-flex justify-content-center">
     <div class="d-flex input-group-prepend">
-      <%= form_tag stalls_path, class: "form-inline pr-4 mt-4", method: :get do %>
+      <%= form_tag stalls_path, class: "form-inline", method: :get do %>
+        <%= image_tag "barack_2.png", alt:"Dessin de Barack Obama", class: "obama" %>
         <div class="d-inline-flex p-2 bd-highlight input-group mb-2 mr-sm-2">
           <%= text_field_tag :query,
             params[:query],
@@ -10,6 +37,7 @@
           %>
         </div>
         <%= submit_tag "Va caire !", class: "btn btn-outline-primary mb-2" %>
+        <%= image_tag "barack_2.png", alt:"Dessin de Barack Obama", class: "obama" %>
       <% end %>
     </div>
   </div>

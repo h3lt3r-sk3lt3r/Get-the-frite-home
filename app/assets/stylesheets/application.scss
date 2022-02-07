@@ -9,15 +9,18 @@
 @import "font-awesome";
 
 // Your CSS partials
-@import "components/index";
-@import "pages/index";
-@import "home";
-@import "components/form";
-@import "components/footer";
 @import "components/banner";
+@import "components/pics&icons";
 @import "components/button";
 @import "components/cards";
 @import "components/container";
+@import "components/footer";
+@import "components/form";
 
+// ...
+@import "components/index";
+@import "pages/index";
+
+// Flatpickr
 @import "flatpickr/dist/flatpickr";
 @import "flatpickr/dist/themes/airbnb";

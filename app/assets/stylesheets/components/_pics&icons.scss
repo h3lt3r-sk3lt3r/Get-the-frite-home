@@ -1,0 +1,53 @@
+.obama {
+  width: 90px;
+}
+
+.pics {
+  display: flex;
+}
+
+.animated_party {
+  margin-top: 30px;
+}
+
+.animated_food_truck {
+  margin-top: 50px;
+}
+
+.borderbox {
+  display: flex;
+  align-items: center;
+}
+
+.borderbox2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border {
+  width: 30px;
+  height: 10px;
+  margin: 10px;
+  background-color: rgba(134, 134, 131, 0.3);
+  border-radius: 2px;
+}
+
+.border1, .border3, .border5 {
+  height: 5px;
+}
+
+
+.pic1text1, .pic2text2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.punchline1, .punchline2 {
+  width: fit-content;
+  text-align: center;
+}
+
+.punchline2 {
+  margin-top: -20px;
+}
