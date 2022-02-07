@@ -6,10 +6,23 @@
   display: flex;
 }
 
+.animated_party {
+  margin-top: 30px;
+}
+
+.animated_food_truck {
+  margin-top: 50px;
+}
 
 .borderbox {
   display: flex;
   align-items: center;
+}
+
+.borderbox2 {
+  display: flex;
+  align-items: center;
+  justify-content:right;
 }
 
 .border {
@@ -31,8 +44,17 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.punchline1, .punchline2 {
+.pic1text1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.punchline1 {
+  width: fit-content;
+  text-align: center;
+}
+
+.punchline2 {
   width: 200px;
   height: 100px;
-  word-break: normal;
 }
